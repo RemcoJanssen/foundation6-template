@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0" type="template" method="upgrade">
+    <name>foundation4joomla</name>
+    <creationDate>2015-07-04</creationDate>
+    <author>Remco Janssen</author>
+    <authorEmail>remco@remcojanssen.nl</authorEmail>
+    <authorUrl>{authorurl}</authorUrl>
+    <copyright>Copyright (C) 2015 by Remco Janssen. All rights reserved.</copyright>
+    <license>GPL V2</license>
+    <version>1.0.1</version>
+    <description>A website template for Joomla, based on Zurb's Foundation</description>
+
+    <files>
+        <filename>index.php</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>bower_components</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>media</folder>
+        <folder>html</folder>
+        <folder>scss</folder>
+        <folder>language</folder>
+    </files>
+
+    <positions>
+        <position>topmenu</position>
+        <position>left</position>
+        <position>center</position>
+        <position>right</position>
+        <position>footer</position>
+    </positions>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_foundation4joomla.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_foundation4joomla.sys.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.tpl_foundation4joomla.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.tpl_foundation4joomla.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field name="sitetitle"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_MENU_TEXT"
+                    description="TPL_FOUNDATION4JOOMLA_MENU_TEXT_DESC"
+                    filter="string" />
+                    <field name="componentposition"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_COMPONENTPOSITION_TEXT"
+                    description="TPL_FOUNDATION4JOOMLA_COMPONENTPOSITION_TEXT_DESC"
+                    filter="string" />
+                    <field name="leftcolwidth"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_LEFTCOLWIDTH_TEXT"
+                    description="TPL_FOUNDATION4JOOMLA_LEFTCOLWIDTH_TEXT_DESC"
+                    filter="string" />
+                    <field name="middlecolwidth"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_MIDDLECOLWIDTH_TEXT"
+                    description="TPL_FOUNDATION4JOOMLA_MIDDLECOLWIDTH_TEXT_DESC"
+                    filter="string" />
+                    <field name="rightcolwidth"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_RIGHTCOLWIDTH_TEXT"
+                    description="TPL_FOUNDATION4JOOMLA_RIGHTCOLWIDTH_TEXT_DESC"
+                    filter="string" />
+                    <field name="leftmediumcolwidth"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_MLEFTCOLWIDTH_TEXT"
+                    description="TPL_FOUNDATION4JOOMLA_MLEFTCOLWIDTH_TEXT_DESC"
+                    filter="string" />
+                    <field name="middlemediumcolwidth"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_MMIDDLECOLWIDTH_TEXT"
+                    description="TPL_FOUNDATION4JOOMLA_MMIDDLECOLWIDTH_TEXT_DESC"
+                    filter="string" />
+                    <field name="rightmediumcolwidth"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_MRIGHTCOLWIDTH_TEXT"
+                    description="TPL_FOUNDATION4JOOMLA_MRIGHTCOLWIDTH_TEXT_DESC"
+                    filter="string" />
+                    <field name="sitedescription"  type="text" default=""
+                    label="JGLOBAL_DESCRIPTION"
+                    description="JGLOBAL_SUBHEADING_DESC"
+                    filter="string" />
+                <field
+                    name="enable_analytics"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="TPL_FOUNDATION4JOOMLA_ANALYTICS_LABEL"
+                    description="TPL_FOUNDATION4JOOMLA_ANALYTICS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="analytics_code"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_ANALYTICSCODE_LABEL"
+                    description="TPL_FOUNDATION4JOOMLA_ANALYTICSCODE_DESC"
+                    filter="string" />
+                <field
+                    name="enable_clicky"
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="TPL_FOUNDATION4JOOMLA_CLICKY_LABEL"
+                    description="TPL_FOUNDATION4JOOMLA_CLICKY_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                    <field name="clicky"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_CLICKYCODE_LABEL"
+                    description="TPL_FOUNDATION4JOOMLA_CLICKYCODE_DESC"
+                    filter="string" />
+                <field 
+                    name="debug" 
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="TPL_FOUNDATION4JOOMLA_DEBUG_LABEL"
+                    description="TPL_FOUNDATION4JOOMLA_DEBUG_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                     <field 
+                    name="developer_mode" 
+                    type="radio"
+                    class="btn-group btn-group-yesno"
+                    default="0"
+                    label="TPL_FOUNDATION4JOOMLA_DEVELOPERSMODE_LABEL"
+                    description="TPL_FOUNDATION4JOOMLA_DEVELOPERSMODE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="developer_ip"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_DEVELOPERSIP_LABEL"
+                    description="TPL_FOUNDATION4JOOMLA_DEVELOPERSIP_DESC"
+                    filter="string" />
+
+                <field name="generator_tag"  type="text" default=""
+                    label="TPL_FOUNDATION4JOOMLA_GENERATOR_LABEL"
+                    description="TPL_FOUNDATION4JOOMLA_GENERATOR_DESC"
+                    filter="string" />
+
+            
+            </fieldset>
+        </fields>
+    </config>
+</extension>
